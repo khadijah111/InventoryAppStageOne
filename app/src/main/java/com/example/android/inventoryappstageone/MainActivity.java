@@ -55,10 +55,9 @@ public class MainActivity extends AppCompatActivity {
         // this is set to "null", then the framework will not insert a row when
         // there are no values).
         // The third argument is the ContentValues object containing the info for current book.
-        long newRowId = db.insert(BooksContract.BooksEntry.TABLE_NAME,
-                null,
-                booksValues);
+        db.insert(BooksContract.BooksEntry.TABLE_NAME, null, booksValues);
 
+        //Show results in log
         Log.d("MESSAGE", "Insert to DB done successfully");
     }
 
@@ -135,10 +134,8 @@ public class MainActivity extends AppCompatActivity {
                         currentBookPrice + " - " + currentBookQuantity + " - " + currentBookSupplierName + " - " +
                         currentBookSupplierPhone + " - " + currentBookSupplierEmail));
             }
-
             //Now finished access all rows in the tables, Finally display the quiry result as LOG message
             Log.d("RESULTS", displayView.toString());
-
         } finally {
             // Always close the cursor when you're done reading from it. This releases all its
             // resources and makes it invalid.

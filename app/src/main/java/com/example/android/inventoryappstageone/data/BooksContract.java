@@ -5,12 +5,9 @@ import android.provider.BaseColumns;
 /**
  * Created by khadijah on 1/31/2018.
  */
-public class BooksContract {
+public final class BooksContract {
     public static final class BooksEntry implements BaseColumns {
-
         public final static String TABLE_NAME = "books";
-
-        public final static String _ID = BaseColumns._ID;
         public final static String COLUMN_BOOK_NAME = "name";//STRING
         public final static String COLUMN_BOOK_PRICE = "price";//INTEGER
         public final static String COLUMN_BOOK_QUANTITY = "quantity";//INTEGER
