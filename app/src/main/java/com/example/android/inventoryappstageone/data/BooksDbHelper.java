@@ -35,7 +35,6 @@ public class BooksDbHelper extends SQLiteOpenHelper {
                 + BooksContract.BooksEntry.COLUMN_BOOK_SUPPLIER_EMAIL + " TEXT);";
         db.execSQL(SQL_CREATE_BOOKS_TABLE);
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // The database is still at version 1, so there's nothing to do be done here.
